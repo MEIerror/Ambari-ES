@@ -1,4 +1,4 @@
-## Logstash And Kibana
+## Elasticsearch
 
 Ambari service for install and manageing Elasticsearch stack on HDP cluster
 
