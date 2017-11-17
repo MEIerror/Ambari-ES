@@ -1,0 +1,33 @@
+{
+  "ELASTIC": {
+    "Component": [
+      {
+        "type": "ganglia",
+        "metrics": {
+          "default": {
+            "metrics/elk/m1": {
+              "metric": "elk.m1",
+              "pointInTime": true,
+              "temporal": true
+            },
+            "metrics/elk/m2": {
+              "metric": "elk.m2",
+              "pointInTime": true,
+              "temporal": true
+            },
+            "metrics/elk/m3": {
+              "metric": "elk.m3",
+              "pointInTime": true,
+              "temporal": true
+            },
+            "metrics/elk/m4": {
+              "metric": "elk.m4",
+              "pointInTime": true,
+              "temporal": true
+            }
+          }
+        }
+      }
+    ]
+  }
+}

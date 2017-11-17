@@ -1,0 +1,45 @@
+{
+  "layouts": [
+    {
+      "layout_name": "default_elk_dashboard",
+      "display_name": "Standard ELK Dashboard",
+      "section_name": "ELK_SUMMARY",
+      "widgetLayoutInfo": [
+        {
+          "widget_name": "elk_widget",
+          "description": "message for this description",
+          "widget_type": "GRAPH",
+          "is_visible": true,
+          "metrics": [
+            {
+              "name": "elk.m1",
+              "metric_path": "metrics/elk/m1",
+              "service_name": "elasticsearch",
+              "component_name": "ELASTIC"
+            },
+            {
+              "name": "elk.m2",
+              "metric_path": "metrics/elk/m2",
+              "service_name": "ELK",
+              "component_name": "ELASTIC"
+            }
+          ],
+          "values": [
+            {
+              "name": "elk-m1 display",
+              "value": "${elk.m1}"
+            },
+            {
+              "name": "elk-m2 display",
+              "value": "${elk.m2}"
+            }
+          ],
+          "properties": {
+            "graph_type": "LINE",
+            "time_range": "1"
+          }
+        }
+      ]
+    }
+  ]
+}

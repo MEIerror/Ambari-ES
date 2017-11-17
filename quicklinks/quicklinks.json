@@ -1,0 +1,37 @@
+{
+  "name": "default",
+  "description": "default quick links configuration",
+  "configuration": {
+    "protocol": {
+      "type": "http"
+    },
+    "links": [
+      {
+        "name": "ELASTIC",
+        "label": "ES",
+        "requires_user_name": "false",
+        "component_name": "MASTER",
+        "url": "%@://%@:%@/",
+        "port": {
+          "http_property": "http_port",
+          "http_default_port": "9200",
+          "regex": "(\\d+)",
+          "site": "elastic-site"
+        }
+      },
+	{
+        "name": "HEAD",
+        "label": "Head plugin",
+        "requires_user_name": "false",
+        "component_name": "MASTER",
+        "url": "%@://%@:%@/",
+        "port": {
+          "http_property": "http_port",
+          "http_default_port": "9100",
+          "regex": "(\\d+)",
+          "site": "elastic-site"
+        }
+      }
+    ]
+  }
+}

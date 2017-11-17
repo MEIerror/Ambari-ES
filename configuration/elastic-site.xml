@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+
+    <property>
+        <name>cluster_name</name>
+        <value>es-cluster</value>
+        <description>Cluster name identifies your cluster</description>
+    </property>
+    <property>
+        <name>node_name</name>
+        <value>adm</value>
+        <description>Cluster name identifies your node</description>
+    </property>
+
+    <property>
+        <name>network_host</name>
+        <value>192.168.1.81</value>
+        <description>elastic host</description>
+    </property>
+
+    <property>
+        <name>http_port</name>
+        <value>9200</value>
+        <description>elastic port</description>
+        <value-attributes>
+            <type>int</type>
+        </value-attributes>
+    </property>
+
+    <property>
+         <name>log_dir</name>
+         <value>/var/log/elasticsearch</value>
+         <description>Log directory for elastic</description>
+    </property>
+
+    <property>
+         <name>node.master</name>
+         <value>1</value>
+         <description>being a master</description>
+    </property>
+
+    <property>
+         <name>discovery.zen.ping.unicast.hosts</name>
+         <value>["192.168.1.81","192.168.1.82"]</value>
+         <description>Log directory for elastic</description>
+    </property>
+
+    <property>
+        <name>pid_dir</name>
+        <value>/var/run/elasticsearch</value>
+        <description>es pid file</description>
+    </property>
+
+    <property>
+        <name>path_data</name>
+        <value>/var/lib/elasticsearch/data</value>
+        <description>Path to directory where to store the data</description>
+        <value-attributes>
+          <type>directory</type>
+        </value-attributes>
+    </property>
+</configuration>
