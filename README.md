@@ -20,3 +20,23 @@ Note: there show the version of environment.
 #### Warning:
 - After the Elasticsearch successfully,Wait a moment.
 - The node.master values should be defined as \[ 1 or 0 ] in elastic-site configs.
+
+####Troubleshoot
+If the elasticsearch start failed,modifity the configuration:
+
+- vim /etc/security/limits.conf 
+```
+* soft nofile 65536
+* hard nofile 131072
+* soft nproc 2048
+* hard nproc 4096
+```
+- vim /etc/security/limits.d/90-nproc.conf 
+```
+*      soft     nproc     2048
+```
+- vim /etc/sysctl.conf 
+```
+vm.max_map_count=655360
+```
+sysctl -p  <file>    (default  /etc/sysctl.conf)
