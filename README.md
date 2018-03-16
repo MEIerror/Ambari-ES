@@ -21,7 +21,7 @@ Note: there show the version of environment.
 - After the Elasticsearch successfully,Wait a moment.
 - The node.master values should be defined as \[ 1 or 0 ] in elastic-site configs.
 
-####Troubleshoot
+#### Troubleshoot
 If the elasticsearch start failed,modifity the configuration:
 
 - vim /etc/security/limits.conf 
