@@ -20,7 +20,12 @@ Note: there show the version of environment.
 #### Warning:
 - After the Elasticsearch successfully,Wait a moment.
 - The node.master values should be defined as \[ 1 or 0 ] in elastic-site configs.
+<<<<<<< HEAD
 #### Troubleshot
+=======
+
+#### Troubleshoot
+>>>>>>> a6cb51d2d6c929c6942091c44e429c67eb44e0b1
 If the elasticsearch start failed,modifity the configuration:
 
 - vim /etc/security/limits.conf 
@@ -38,4 +43,8 @@ If the elasticsearch start failed,modifity the configuration:
 ```
 vm.max_map_count=655360
 ```
+<<<<<<< HEAD
 sysctl -p  <file>    (default  /etc/sysctl.conf)
+=======
+sysctl -p  <file>    (default  /etc/sysctl.conf)
+>>>>>>> a6cb51d2d6c929c6942091c44e429c67eb44e0b1
