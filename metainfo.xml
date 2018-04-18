@@ -4,7 +4,7 @@
     <services>
         <service>
             <name>elasticsearch</name>
-            <displayName>elasticsearch</displayName>
+            <displayName>Elasticsearch</displayName>
             <comment>Indexing and Search</comment>
             <version>5.2.0</version>
             <components>
