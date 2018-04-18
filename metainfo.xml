@@ -5,7 +5,7 @@
         <service>
             <name>elasticsearch</name>
             <displayName>Elasticsearch</displayName>
-            <comment>Indexing and Search</comment>
+            <comment>Elasticsearch is a distributed, RESTful search.</comment>
             <version>5.2.0</version>
             <components>
                 <component>
@@ -20,6 +20,7 @@
                     </commandScript>
                 </component>
             </components>
+
 
             <commandScript>
                 <script>scripts/service_check.py</script>

@@ -24,6 +24,7 @@ fi
 
 wget -O ${WORK_DIR}/elasticsearch-5.2.0.tar.gz  $ES_URL
 tar -zxf ${WORK_DIR}/elasticsearch-5.2.0.tar.gz -C ${WORK_DIR}
+rm -fr ${WORK_DIR}/elasticsearch-5.2.0.tar.gz
 chown ${ES_USER}:${ES_USER} ${WORK_DIR}/elasticsearch-5.2.0 -R
 #wget -O ${WORK_DIR}/elasticsearch-head-master.zip $HEAD_URL
 #wget -O ${WORK_DIR}/node-v6.11.4-linux-x64.tar $NODE_URL
