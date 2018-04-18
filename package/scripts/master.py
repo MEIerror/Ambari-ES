@@ -42,9 +42,10 @@ class Elasticsearch(Script):
         env.set_params(params)
         env.set_params(status_params)
         self.configure(env)
-        start_cmd = format("sh {service_packagedir}/files/start-es.sh {elastic_dir} {pid_dir}")
+        start_cmd = format("{elastic_dir}/bin/elasticsearch -p {pid_dir}/es.pid -d")
         Execute(start_cmd,
                 logoutput=True,
+                user=params.elastic_user,
                 environment={
                     'JAVA_HOME': params.java_home,
                     'PATH': '$PATH:$JAVA_HOME/bin'
