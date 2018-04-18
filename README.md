@@ -12,11 +12,30 @@ Note: there show the version of environment.
   [下载地址](https://www.elastic.co/downloads/past-releases)
 #### There are some problems to be noted here
 
- * Elasticsearch's pid file unable :
+ * Elasticsearch's pid file unable:
     - pid_dir = config\['configurations']\['elastic-site']\['pid_dir']
-    - #pid_file = format("{pid_dir}/es.pid")
+    - pid_file = format("{pid_dir}/es.pid")
 
    I'm defining it this way： pid_file = "/var/run/elasticsearch/es.pid"
 #### Warning:
 - After the Elasticsearch successfully,Wait a moment.
 - The node.master values should be defined as \[ 1 or 0 ] in elastic-site configs.
+#### Troubleshot
+If the elasticsearch start failed,modifity the configuration:
+
+- vim /etc/security/limits.conf 
+```
+* soft nofile 65536
+* hard nofile 131072
+* soft nproc 2048
+* hard nproc 4096
+```
+- vim /etc/security/limits.d/90-nproc.conf 
+```
+*      soft     nproc     2048
+```
+- vim /etc/sysctl.conf 
+```
+vm.max_map_count=655360
+```
+sysctl -p  <file>    (default  /etc/sysctl.conf)
